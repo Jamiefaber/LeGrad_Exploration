@@ -1,0 +1,8 @@
+ipykernel
+legrad_torch
+torch
+Pillow
+ftfy
+regex
+tqdm
+open_clip_torch
