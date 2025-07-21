@@ -1,0 +1,5 @@
+# unzipped dataset folder
+face_mask_dataset/
+
+# virtual enviroment
+venv/
