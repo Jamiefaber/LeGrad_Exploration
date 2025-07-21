@@ -3,6 +3,7 @@ import xml.etree.ElementTree as ET
 from PIL import Image
 
 class DatasetLoader:
+    """Initializes class to load in and parse the data"""
     def __init__(self, image_dir, annot_dir):
         self.image_dir = image_dir
         self.annot_dir = annot_dir

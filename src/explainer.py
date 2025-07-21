@@ -5,12 +5,13 @@ from PIL import Image
 from .visual_transformer import ViTWrapper
 
 class LeGradExplainer:
+    """ Initializes the LeGrad explainer model class"""
     def __init__(self, clip_model: ViTWrapper):
         self.clip = clip_model
-        self.model = LeWrapper(self.clip.model)  # This should work now
+        self.model = LeWrapper(self.clip.model)
         self.model.eval()
 
-        # Override the preprocess with LePreprocess
+        # Override the preprocess with LePreprocess as per the LeGrad docs
         self.preprocess = LePreprocess(preprocess=self.clip.preprocess, image_size=self.clip.image_size)
 
     def compute(self, pil_images, prompt, visualize_result=True):
